@@ -1,0 +1,17 @@
+.SearchBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.MuiTextField-root {
+  background: white;
+  border-radius: 8px;
+}
+
+.MuiButton-root {
+  border-radius: 8px !important;
+  padding: 10px 0 !important;
+  font-weight: 600 !important;
+}
