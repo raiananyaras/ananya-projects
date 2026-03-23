@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STUDY BUDDY</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="row">
+        <div class="logo"><span class="dot"></span> STUDY BUDDY</div>
+        <div class="settings">
+          <select id="model">
+            <option value="gemini-2.5-flash">gemini-2.5-flash (fast)</option>
+            <option value="gemini-2.0-flash-001">gemini-2.0-flash-001</option>
+            <option value="gemini-2.0-pro-exp-02-05">gemini-2.0-pro-exp-02-05</option>
+          </select>
+          <button id="runDiag" title="Run self-test">Diagnostics</button>
+          <button id="clearChat" title="Clear history">Clear</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="chat" class="chat" aria-live="polite"></div>
+
+      <div class="composer">
+        <div class="tools">
+          <label class="tool-btn" for="imageInput">📷 Image</label>
+          <input id="imageInput" type="file" accept="image/*" multiple />
+        </div>
+        <textarea id="prompt" placeholder="Ask a question… e.g., Explain this circuit diagram or Solve this calculus problem"></textarea>
+        <div class="actions">
+          <button id="ask" class="primary">Ask</button>
+        </div>
+      </div>
+      <div class="hint">Tip: You can ask with text only.</div>
+      <div id="warn" class="hint"></div>
+      <div id="diag" class="hint"></div>
+    </main>
+
+    <footer>
+      Developed by Ananya Rai 
+    </footer>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
